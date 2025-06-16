@@ -20,7 +20,7 @@ Follow the steps below to set up and run the system:
 - This launches a REST API to perform predefined queries on the OLAP data
 
 
-## ⚙Dependency Management
+## Dependency Management
 
 If you encounter any errors during execution, it's likely due to missing or incompatible dependencies. To ensure stability, navigate to each folder separately: 
 
