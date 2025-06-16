@@ -1,19 +1,32 @@
-Steps
-1. Import OLAP SQL create script and OLTP files to phpmyadmin from Import --> File to import (Databases folder)
-2. Add data to OLTP with files in "Insert Faker Data" by running main3 (Insert Faker Data Folder)
-3. Perform ETL with files from ETL by running main2 (ETL Folder)
-4. Run main.py and open rest API interface to search for pre-defied queries (REST Folder)
+## Project Overview: Coursework for Lapin AMK, Edistynyt Tiedonhallinta (Lapland UAS, Advanced Data Management) through Open UAS studies
+
+Follow the steps below to set up and run the system:
+
+### 1.  Import Databases
+- Use **phpMyAdmin** to import the OLAP and OLTP SQL files:
+  - Navigate to **Import → File to import**
+  - Use files from the **`Databases/`** folder
+
+### 2. Populate OLTP with Faker Data
+- Run `main3.py` located in the **`Insert Faker Data/`** folder
+- This will insert sample data into the OLTP database
+
+### 3. Run ETL Process
+- Run `main2.py` located in the **`ETL/`** folder
+- This extracts data from OLTP and loads it into OLAP
+
+### 4. Launch REST API
+- Run `main.py` in the **`REST/`** folder
+- This launches a REST API to perform predefined queries on the OLAP data
 
 
-If required upon running, remember to separately install requirements for each folder
-by navigating with cd command to folder and install with pip
+## ⚙Dependency Management
 
-*** pip install -r requirements.txt ***
-*** pip install -r requirements2.txt ***
-*** pip install -r requirements3.txt ***
+If you encounter any errors during execution, it's likely due to missing or incompatible dependencies. To ensure stability, navigate to each folder separately: 
 
-#### laplanduas_rental.sql might need to be imported to database server instead of empty OLTP.txt create script file if running faker gives errors during import users (this data was added during lectures and contains full db dumb). Only exists for adding users. 
 
-#### There is possibility separate virtual environment needs to be created for each folder and their requirements to avoid conflicts to get rid of above problem due to confliting requirements in the .venv, especially for faker and adding users. 
 
-### with laplanduas_rental.sql to OLAP (main2) and REST (main3) should work without problems. 
+```bash
+pip install -r requirements.txt
+pip install -r requirements2.txt
+pip install -r requirements3.txt
